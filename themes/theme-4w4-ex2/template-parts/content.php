@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package theme-4w4
+ * @package theme-4w4-ex2
  */
 
 ?>
@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				theme_4w4_posted_on();
-				theme_4w4_posted_by();
+				theme_4w4_ex2_posted_on();
+				theme_4w4_ex2_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php theme_4w4_post_thumbnail(); ?>
+	<?php theme_4w4_ex2_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -37,7 +37,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'theme-4w4' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'theme-4w4-ex2' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -50,7 +50,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'theme-4w4' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'theme-4w4-ex2' ),
 				'after'  => '</div>',
 			)
 		);
@@ -58,6 +58,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php theme_4w4_entry_footer(); ?>
+		<?php theme_4w4_ex2_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

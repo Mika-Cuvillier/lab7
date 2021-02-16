@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package theme-4w4
+ * @package theme-4w4-ex2
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
