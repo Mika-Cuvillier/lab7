@@ -537,6 +537,47 @@ a:hover, a:active {
   outline: 0;
 }
 
+.main-navigation a {
+  color: #d4d3bf;
+  margin-left: 3rem;
+}
+
+.main-navigation a:visited {
+  color: #f3e7b2;
+}
+
+.main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
+  color: #ffffff;
+}
+
+.main-navigation a:focus {
+  outline: thin dotted;
+}
+
+.main-navigation a:hover, .main-navigation a:active {
+  outline: 0;
+}
+
+.site-title a {
+  color: #0a3668;
+}
+
+.site-title a:visited {
+  color: #1a2980;
+}
+
+.site-title a:hover, .site-title a:focus, .site-title a:active {
+  color: #1b5ca7;
+}
+
+.site-title a:focus {
+  outline: thin dotted;
+}
+
+.site-title a:hover, .site-title a:active {
+  outline: 0;
+}
+
 /* Forms
 --------------------------------------------- */
 button,
@@ -621,6 +662,27 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.no-sidebar .site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/*
+	#page - .site
+		#masthead - .site-header
+			.site-branding
+				.site-title
+				.site-description
+			#site-navigation - .main-navigation
+		#primary - .site-main
+		#secondary - .widget-area
+		#colophon - .site-footer
+*/
+.site-branding, #primary, #colophon {
+  margin-left: 3rem;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -636,6 +698,9 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
+  background-color: #005;
+  position: absolute;
+  width: 100%;
 }
 
 .main-navigation ul ul {
@@ -676,6 +741,33 @@ textarea {
   text-decoration: none;
 }
 
+/* Bouton burger */
+.menu-toggle {
+  padding: 0rem;
+  border: 0;
+  margin-left: 3rem;
+  transition: transform .20s;
+  transform: rotate(0);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background: #f6f7f8;
+}
+
+.menu-toggle:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.menu-toggle:active {
+  transform: scale(0.99);
+}
+
+.main-navigation.toggled .menu-toggle {
+  transform: rotate(90deg);
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -691,6 +783,10 @@ menu tablet
   }
   .main-navigation ul {
     display: flex;
+    height: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    position: static;
   }
 }
 
@@ -936,5 +1032,35 @@ menu tablet
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+/* Local
+--------------------------------------------- */
+.site-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 3.5rem);
+  font-weight: bold;
+  color: #003;
+  margin-bottom: 0;
+}
+
+.site-title a {
+  text-decoration: none;
+}
+
+.site-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.5rem);
+  font-weight: normal;
+  color: #003;
+  margin-top: 0;
+}
+
+.accueil {
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 2rem);
+}
+
+.accueil ul {
+  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */

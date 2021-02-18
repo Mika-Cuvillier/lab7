@@ -141,6 +141,8 @@ add_action( 'widgets_init', 'theme_4w4_ex2_widgets_init' );
  */
 function theme_4w4_ex2_scripts() {
 	wp_enqueue_style( 'theme-4w4-ex2-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'theme-4w4-ex2-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap', false ); 
+
 	wp_style_add_data( 'theme-4w4-ex2-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'theme-4w4-ex2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
