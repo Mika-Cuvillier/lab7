@@ -99,6 +99,12 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	@include desktop{
+		display: flex;
+	}
+	@include tablet{
+		display: flex;
+	}
 }
 /*-----------------------------------------------
 menu tablet
@@ -116,6 +122,7 @@ menu tablet
 		align-items: center;
 		position: static;
 	}
+	
 }
 
 .comment-navigation,

@@ -1,6 +1,7 @@
 body{
     width: 100vw;
     height: 100vh;
+    background-color: rgb(121, 139, 19);
 }
 body.home::after{
     width: 100%;
@@ -28,6 +29,26 @@ body.home::after{
     a{
         text-decoration: none;
     }   
+    @include desktop{
+        font-family: $font__title;
+        font-size: clamp(0.9rem, #{"-0.875rem + 6.333vw"}, 2.2rem);
+        font-weight: bold;
+        color: #003;
+        margin-bottom: 0;
+            a{
+                text-decoration: none;
+            }   
+    }
+    @include tablet{
+        font-family: $font__title;
+        font-size: clamp(0.9rem, #{"-0.875rem + 6.333vw"}, 2rem);
+        font-weight: bold;
+        color: #003;
+        margin-bottom: 0;
+            a{
+                text-decoration: none;
+            }   
+    }
 }
 .site-description{
     font-family: $font__title;
@@ -38,9 +59,26 @@ body.home::after{
 }
 .home .entry-header{
     font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 3rem);
+    margin-left: 80px;
+    margin-top: 150px;
+}
+.menu-toggle:active{
+    .home .entry-header{
+        margin-top: 100px;
+    }
 }
 .accueil{
+    display: flex;
+    align-items: center;
     font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 2rem);
+    @include tablet{
+        font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 1.3rem);
+    }
+    @include desktop{
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 1.3rem);
+    }
     ul{
         list-style-type: none;
     }
@@ -49,3 +87,5 @@ body.home::after{
         border-radius: 50%;
     }
 }
+
+

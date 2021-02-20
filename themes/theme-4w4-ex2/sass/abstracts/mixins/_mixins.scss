@@ -9,11 +9,16 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
-
+$largeur_tablet: 600px;
 $largeur_desktop: 800px;
 
 @mixin desktop{
 	@media(min-width: $largeur_desktop){
+		@content;
+	}
+}
+@mixin tablet{
+	@media(max-width: $largeur_desktop) and (min-width: $largeur_tablet){
 		@content;
 	}
 }
