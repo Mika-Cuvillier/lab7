@@ -663,6 +663,10 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+}
+
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
@@ -802,6 +806,7 @@ menu tablet
     justify-content: space-around;
     align-items: center;
     position: static;
+    width: 100vw;
   }
 }
 
@@ -1049,9 +1054,9 @@ menu tablet
   margin-bottom: 1.5em;
 }
 
-/* Local
+/* Local/accueil
 --------------------------------------------- */
-body {
+body.home {
   width: 100vw;
   height: 100vh;
   background-color: #798b13;
@@ -1161,5 +1166,33 @@ body.home::after {
 .accueil img {
   display: block;
   border-radius: 50%;
+}
+
+/* Local/carrousel
+--------------------------------------------- */
+.carrousel {
+  display: flex;
+  width: 300vw;
+  height: 20vh;
+  transition: transform .5s;
+}
+
+.carrousel div {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrousel div:nth-of-type(1) {
+  background-color: #be4343;
+}
+
+.carrousel div:nth-of-type(2) {
+  background-color: #58be43;
+}
+
+.carrousel div:nth-of-type(3) {
+  background-color: #c613cc;
 }
 /*# sourceMappingURL=style.css.map */
