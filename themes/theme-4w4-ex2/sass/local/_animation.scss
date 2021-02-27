@@ -10,44 +10,38 @@
 $columns: 5;
 
 @for $i from 1 through $columns {
-    .animation div:nth-last-of-type(#{$i}){
+    .wp-block-column:nth-last-of-type(#{$i}){
       
         animation-delay: $i#{s};
     }
 }
 
-/* Animation de la page d'accueil*/
+/* Animation des composant du scrum*/
 
 /* Animation de la section .principal*/
 
 
-$columns: 5;
+.main-navigation{
+    animation: anim-menu 1s both cubic-bezier(.43, 1.06, .97, 1.1);
+}
 
-@for $i from 1 through $columns {
-    .principal h3:nth-of-type(#{$i})
-    {
-      
-        animation: anim-#{$i} 1s .5*$i#{s} both;
+@keyframes anim-menu{
+    0%{
+        transform: translateY(-500px);
+    }
+    100%{
+        transform: translateY(0px);
     }
 }
 
+$columns: 5;
 
-$tabTranslate: (
-    1: translateY(-500px) & translateX(-500px),
-    2: translateY(-600px) & translateX(600px),
-    3: translateY(-500px),
-    4: translateY(600px) & translateX(-600px),
-    5: translateY(500px) & translateX(500px)
-);
-
-@each $i, $elem in $tabTranslate {
-        @keyframes anim-#{$i}{
-            0%{transform: $elem;}
-            100%{transform: scale(0);}
-            100%{transform: translate(0);}
-        }
+@for $i from 1 through $columns {
+    .main-navigation:nth-last-of-type(#{$i}){
+      
+        animation-delay: $i#{s};
     }
-
+}
 
 
     
