@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: theme-4w4-ex2
 Theme URI: http://underscores.me/
@@ -663,6 +664,10 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+}
+
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
@@ -681,7 +686,13 @@ textarea {
 		#colophon - .site-footer
 */
 .site-branding, #primary, #colophon {
-  margin-left: 3rem;
+  margin-left: .5rem;
+}
+
+@media (min-width: 800px) {
+  .site-branding, #primary, #colophon {
+    margin-left: 3rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -691,7 +702,7 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%;
+  width: 100vw;
 }
 
 .main-navigation ul {
@@ -747,8 +758,6 @@ textarea {
   padding: 0rem;
   border: 0;
   margin-left: 3rem;
-  transition: transform .20s;
-  transform: rotate(0);
 }
 
 .menu-toggle:hover,
@@ -765,26 +774,19 @@ textarea {
   transform: scale(0.99);
 }
 
-.main-navigation.toggled .menu-toggle {
-  transform: rotate(90deg);
-}
-
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle, .main-navigation.toggled ul {
   display: block;
 }
 
 @media (min-width: 800px) {
-  .menu-toggle,
-  .main-navigation.toggled ul {
+  .menu-toggle, .main-navigation.toggled ul {
     display: flex;
   }
 }
 
 @media (max-width: 800px) and (min-width: 600px) {
-  .menu-toggle,
-  .main-navigation.toggled ul {
+  .menu-toggle, .main-navigation.toggled ul {
     display: flex;
   }
 }
@@ -802,6 +804,7 @@ menu tablet
     justify-content: space-around;
     align-items: center;
     position: static;
+    width: 100vw;
   }
 }
 
@@ -1049,12 +1052,17 @@ menu tablet
   margin-bottom: 1.5em;
 }
 
-/* Local
+/* Local/accueil
 --------------------------------------------- */
-body {
+body.home {
   width: 100vw;
   height: 100vh;
   background-color: #798b13;
+}
+
+body.home #primary {
+  margin-left: 0;
+  width: 100vw;
 }
 
 body.home::after {
@@ -1073,7 +1081,7 @@ body.home::after {
 
 @media (min-width: 800px) {
   body.home::after {
-    clip-path: polygon(90% 0, 100% 0, 100% 100%, 70% 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 65% 49%);
     background-color: #1e65a7;
   }
 }
@@ -1161,5 +1169,258 @@ body.home::after {
 .accueil img {
   display: block;
   border-radius: 50%;
+}
+
+/* Local/carrousel
+--------------------------------------------- */
+.carrousel {
+  display: flex;
+  width: 300vw;
+  height: 20vh;
+  transition: transform .5s;
+}
+
+.carrousel div {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrousel div:nth-of-type(1) {
+  background-color: #be4343;
+}
+
+.carrousel div:nth-of-type(2) {
+  background-color: #58be43;
+}
+
+.carrousel div:nth-of-type(3) {
+  background-color: #c613cc;
+}
+
+/* Local/burger
+--------------------------------------------- */
+/*----------------------------------------------
+Variable Sass
+-----------------------------------------------*/
+/*----------------------------------------------
+Bouton Burger
+-----------------------------------------------*/
+#burger {
+  display: block;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  /* J'ai essayer 150 chose mon menu veut rien savoir(pour afficher le primary-menu) */
+}
+
+@media (max-width: 800px) and (min-width: 600px) {
+  #burger {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  #burger {
+    display: none;
+  }
+}
+
+#burger .menu-toggle .primary-menu {
+  display: block;
+}
+
+#burger div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#burger div:nth-last-of-type(1) {
+  clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+  background-color: #bae61b;
+}
+
+#burger div:nth-last-of-type(2) {
+  clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  background-color: #751212;
+  z-index: -1;
+}
+
+#burger div:nth-last-of-type(3) {
+  clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+  background-color: #c57712;
+}
+
+/*-------------------------------------------------------------------
+Animation de la première barre bar1
+--------------------------------------------------------------------*/
+@keyframes ouvrirX1 {
+  0% {
+    clip-path: polygon(2% 17%, 102% 17%, 102% 27%, 2% 27%);
+  }
+  100% {
+    clip-path: polygon(7% -7%, 107% 93%, 93% 107%, -7% 7%);
+  }
+}
+
+@keyframes fermeX1 {
+  0% {
+    clip-path: polygon(7% -7%, 107% 93%, 93% 107%, -7% 7%);
+  }
+  100% {
+    clip-path: polygon(2% 17%, 102% 17%, 102% 27%, 2% 27%);
+  }
+}
+
+.ouvrirX1 {
+  animation: ouvrirX1 0.25s both;
+}
+
+.fermeX1 {
+  animation: fermeX1 0.25s both;
+}
+
+/*-------------------------------------------------------------------
+Animation de la deuxième barre bar2
+--------------------------------------------------------------------*/
+@keyframes ouvrirX2 {
+  0% {
+    clip-path: polygon(2% 47%, 102% 47%, 102% 57%, 2% 57%);
+  }
+  100% {
+    clip-path: polygon(52% 47%, 52% 47%, 52% 57%, 52% 57%);
+  }
+}
+
+@keyframes fermeX2 {
+  0% {
+    clip-path: polygon(52% 47%, 52% 47%, 52% 57%, 52% 57%);
+  }
+  100% {
+    clip-path: polygon(2% 47%, 102% 47%, 102% 57%, 2% 57%);
+  }
+}
+
+.ouvrirX2 {
+  animation: ouvrirX2 0.25s both;
+}
+
+.fermeX2 {
+  animation: fermeX2 0.25s both;
+}
+
+/*-------------------------------------------------------------------
+Animation de la dernière barre bar3
+--------------------------------------------------------------------*/
+@keyframes ouvrirX3 {
+  0% {
+    clip-path: polygon(2% 77%, 102% 77%, 102% 87%, 2% 87%);
+  }
+  100% {
+    clip-path: polygon(-7% 97%, 97% -7%, 107% 7%, 7% 107%);
+  }
+}
+
+@keyframes fermeX3 {
+  0% {
+    clip-path: polygon(-7% 97%, 97% -7%, 107% 7%, 7% 107%);
+  }
+  100% {
+    clip-path: polygon(2% 77%, 102% 77%, 102% 87%, 2% 87%);
+  }
+}
+
+.ouvrirX3 {
+  animation: ouvrirX3 0.25s both;
+}
+
+.fermeX3 {
+  animation: fermeX3 0.25s both;
+}
+
+/* Local/animation
+--------------------------------------------- */
+.wp-block-column {
+  animation: anim-entete 1s both cubic-bezier(0.43, 1.06, 0.97, 1.1);
+}
+
+@keyframes anim-entete {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.wp-block-column:nth-last-of-type(1) {
+  animation-delay: 1s;
+}
+
+.wp-block-column:nth-last-of-type(2) {
+  animation-delay: 2s;
+}
+
+.wp-block-column:nth-last-of-type(3) {
+  animation-delay: 3s;
+}
+
+.wp-block-column:nth-last-of-type(4) {
+  animation-delay: 4s;
+}
+
+.wp-block-column:nth-last-of-type(5) {
+  animation-delay: 5s;
+}
+
+/* Animation des composant du scrum*/
+/* Animation de la section .principal*/
+.main-navigation {
+  animation: anim-menu 1s both cubic-bezier(0.43, 1.06, 0.97, 1.1);
+}
+
+@keyframes anim-menu {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.main-navigation:nth-last-of-type(1) {
+  animation-delay: 1s;
+}
+
+.main-navigation:nth-last-of-type(2) {
+  animation-delay: 2s;
+}
+
+.main-navigation:nth-last-of-type(3) {
+  animation-delay: 3s;
+}
+
+.main-navigation:nth-last-of-type(4) {
+  animation-delay: 4s;
+}
+
+.main-navigation:nth-last-of-type(5) {
+  animation-delay: 5s;
+}
+
+/* Local/footer
+--------------------------------------------- */
+.pagination {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  color: black;
+  position: relative;
+  right: -850px;
+  top: 700px;
 }
 /*# sourceMappingURL=style.css.map */
