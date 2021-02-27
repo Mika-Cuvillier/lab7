@@ -1,0 +1,56 @@
+.wp-block-column{
+    animation: anim-entete 1s both cubic-bezier(.43, 1.06, .97, 1.1);
+}
+
+@keyframes anim-entete{
+    0%{transform: translateX(500px);}
+    100%{transform: translateX(0px);}
+}
+
+$columns: 5;
+
+@for $i from 1 through $columns {
+    .animation div:nth-last-of-type(#{$i}){
+      
+        animation-delay: $i#{s};
+    }
+}
+
+/* Animation de la page d'accueil*/
+
+/* Animation de la section .principal*/
+
+
+$columns: 5;
+
+@for $i from 1 through $columns {
+    .principal h3:nth-of-type(#{$i})
+    {
+      
+        animation: anim-#{$i} 1s .5*$i#{s} both;
+    }
+}
+
+
+$tabTranslate: (
+    1: translateY(-500px) & translateX(-500px),
+    2: translateY(-600px) & translateX(600px),
+    3: translateY(-500px),
+    4: translateY(600px) & translateX(-600px),
+    5: translateY(500px) & translateX(500px)
+);
+
+@each $i, $elem in $tabTranslate {
+        @keyframes anim-#{$i}{
+            0%{transform: $elem;}
+            100%{transform: scale(0);}
+            100%{transform: translate(0);}
+        }
+    }
+
+
+
+    
+
+
+

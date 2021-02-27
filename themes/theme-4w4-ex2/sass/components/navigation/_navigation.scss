@@ -25,13 +25,13 @@
 			}
 
 			li {
-
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
 					left: auto;
 				}
 			}
+			
 
 			a {
 				width: 200px;

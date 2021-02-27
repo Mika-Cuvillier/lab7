@@ -25,6 +25,9 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'theme-4w4-ex2' ), 'theme-4w4-ex2', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
+		<div class="pagination">
+			1
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
