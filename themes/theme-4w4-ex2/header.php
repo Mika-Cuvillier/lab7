@@ -57,9 +57,13 @@
 		<button id='trois'>3</button>
 		<?php endif ?>
 		<!-- Fin du carrousel -->
-		
+		<!--img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=000000" width="32" height="32"-->
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=000000" width="32" height="32"></button>
+			<section id="burger" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<div></div>
+        		<div></div>
+        		<div></div>
+		</section>
 			<?php
 			wp_nav_menu(
 				array(

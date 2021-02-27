@@ -156,7 +156,8 @@ function theme_4w4_ex2_scripts() {
 	wp_style_add_data( 'theme-4w4-ex2-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'theme-4w4-ex2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	
+	wp_enqueue_script( 'theme-4w4-ex2-burger', get_template_directory_uri() . '/js/burger.js', array(), _S_VERSION, true );
+
 	wp_register_script( 'theme-4w4-ex2-carrousel', get_template_directory_uri() . '/js/carrousel.js', array(), _S_VERSION, true );
 
 	if ( is_front_page()){

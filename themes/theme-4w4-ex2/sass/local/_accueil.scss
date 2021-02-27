@@ -2,6 +2,11 @@ body.home{
     width: 100vw;
     height: 100vh;
     background-color: rgb(121, 139, 19);
+
+    #primary{
+        margin-left: 0;
+        width: 100vw;
+    }
 }
 body.home::after{
     width: 100%;
@@ -16,7 +21,7 @@ body.home::after{
     background-color: rgb(30, 101, 167);
     z-index: -1;
     @include desktop{
-        clip-path: polygon(90% 0, 100% 0, 100% 100%, 70% 100%);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 65% 49%);
         background-color: rgb(30, 101, 167);
     }
 }
