@@ -72,6 +72,25 @@ body.home::after{
         margin-top: 100px;
     }
 }
+.main-navigation.toggled ul,
+.main-navigation ul {
+display: none;
+@include tablet{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height : 2.5rem;
+    width : 100%;
+}
+@include desktop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height : 2.5rem;
+    width : 100%;
+}
+
+}
 .accueil{
     display: flex;
     align-items: center;

@@ -1,25 +1,21 @@
 .main-navigation {
 	display: block;
 	width: 100vw;
-	
 
 	ul {
 		display: none;
-		position : absolute;
-		width : 100%;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: #000;
-	
-	
+		background-color: #005;
+		position: absolute;
+		width: 100vw;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
 			top: 100%;
-			
 			left: -999em;
 			z-index: 99999;
 
@@ -28,21 +24,18 @@
 				top: 0;
 			}
 
-
 			li {
-
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
 					left: auto;
 				}
 			}
-
+			
 
 			a {
 				width: 200px;
 			}
-
 
 			:hover > a,
 			.focus > a {
@@ -51,33 +44,25 @@
 			a:hover,
 			a.focus {
 			}
-			
 		}
 
 		li:hover > ul,
 		li.focus > ul {
-			left: 0;
-		
+			left: auto;
 		}
-
-
 	}
 
 	li {
 		position: relative;
-	 flex : 1;
 
 		&:hover > a,
 		&.focus > a {
 		}
-	
-
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
-		padding: .5rem;
 	}
 
 	.current_page_item > a,
@@ -86,18 +71,16 @@
 	.current-menu-ancestor > a {
 	}
 }
-/* -----------------------------------------------------------------------------
-Bouton burger 
-------------------------------------------------------------------------------*/
-.menu-toggle {
-	padding :0;
-//	transition : transform .25s;
-//	transform : rotate(0deg);
-	border : 0;
+/* Bouton burger */
+.menu-toggle{
+	padding: 0rem;
+	border: 0;
+	margin-left: 3rem;
 }
+
 .menu-toggle:hover,
 .menu-toggle:focus {
-    background: #fafbfc;
+    background: #f6f7f8;
 }
 
 .menu-toggle:focus {
@@ -108,32 +91,44 @@ Bouton burger
 .menu-toggle:active {
     transform: scale(0.99);
 }
-
-/*
-.main-navigation.toggled .menu-toggle{
-	transform : rotate(90deg);
-}
-*/
-
-.menu-toggle,
-.main-navigation.toggled ul {
+/* Small menu. */
+ .menu-toggle, .main-navigation.toggled ul {
 	display: block;
+	@include desktop{
+		display: flex;
+	}
+	@include tablet{
+		display: flex;
+	}
 }
-/* ---------------------------------------------------------------------------
+
+/*-----------------------------------------------
 menu tablet
------------------------------------------------------------------------------- */
+-------------------------------------------------*/
 @media screen and (min-width: 37.5em) {
 
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation.toggled ul,
+
 	.main-navigation ul {
 		display: flex;
-		position : static;
+		height: 2rem;
 		justify-content: space-around;
-		
+		align-items: center;
+		position: static;
+		width: 100vw;
+		ul{
+			position: absolute;
+			width: 300px;
+			height: 550px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
 	}
+	
 }
 
 .comment-navigation,
