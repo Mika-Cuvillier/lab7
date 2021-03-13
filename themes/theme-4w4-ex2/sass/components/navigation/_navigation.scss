@@ -2,7 +2,6 @@
 	display: block;
 	width: 100vw;
 	
-
 	ul {
 		display: none;
 		position : absolute;
@@ -11,48 +10,24 @@
 		margin: 0;
 		padding-left: 0;
 		background-color: #000;
+		text-align: left;
+		left: 0;
 	
 	
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			//float: left;
 			position: absolute;
 			top: 100%;
-			
+			transition: left .5s;
 			left: -999em;
 			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
-
 			a {
-				width: 200px;
-			}
-
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-			
-		}
+				width: 100%;
+				padding-left: 20px; 
+			}			
+		} /* sub-menu */
 
 		li:hover > ul,
 		li.focus > ul {
@@ -60,12 +35,26 @@
 		
 		}
 
+		li > a[href="#"]::after{
+			content: "+";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 90%;
+			right: 0;
+		}
+		li.focus > a[href="#"]::after,
+		li > a[href="#"]:hover::after{
+			content: "-";
+		}
 
-	}
+	}/* nav-menu (ul-principal) */
 
 	li {
 		position: relative;
-	 flex : 1;
+	 	flex : 1;
 
 		&:hover > a,
 		&.focus > a {
@@ -85,7 +74,7 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
-}
+}/* fin de main-navigation */
 /* -----------------------------------------------------------------------------
 Bouton burger 
 ------------------------------------------------------------------------------*/
@@ -132,9 +121,23 @@ menu tablet
 		display: flex;
 		position : static;
 		justify-content: space-around;
-		
+		a[href="#"]::after{
+			display: none;
+		}
+		li:hover ul{
+			display: block;
+			position: absolute;
+			width: 300px;
+			height: 500px;
+		}
+		ul{
+			display: none;
+		}
 	}
 }
+
+/* -------------------------------------------------------------------------------
+---------------------------------------------------------------------------------*/
 
 .comment-navigation,
 .posts-navigation,

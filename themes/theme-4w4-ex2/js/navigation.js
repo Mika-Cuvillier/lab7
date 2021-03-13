@@ -12,8 +12,8 @@
 		return;
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
-
+	const button = document.getElementById( 'burger' );
+	console.log('button.id');
 	// Return early if the button don't exist.
 	if ( 'undefined' === typeof button ) {
 		return;

@@ -74,7 +74,6 @@ body.home::after{
 }
 .main-navigation.toggled ul,
 .main-navigation ul {
-display: none;
 @include tablet{
     display: flex;
     justify-content: space-around;
