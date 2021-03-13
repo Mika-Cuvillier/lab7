@@ -1466,4 +1466,23 @@ Animation de la dernière barre bar3
   right: -850px;
   top: 700px;
 }
+
+/* Local/fron-page
+--------------------------------------------- */
+.site-main p {
+  margin-left: 50px;
+  color: black;
+}
+
+.site-main p:nth-of-type(1),
+.site-main p:nth-of-type(4),
+.site-main p:nth-of-type(9),
+.site-main p:nth-of-type(14),
+.site-main p:nth-of-type(19),
+.site-main p:nth-of-type(24),
+.site-main p:nth-of-type(30) {
+  margin-left: 0;
+  color: black;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
