@@ -20,25 +20,49 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+			<!-- Début du carrousel -->
+			<?php
+			if ( is_front_page()) : ?>
+			<section class="carrousel">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+			</section>
+			<button id='un'>1</button>
+			<button id='deux'>2</button>
+			<button id='trois'>3</button>
+			<?php endif ?>
+			<!-- Fin du carrousel -->
+			<section class="list-cours">
 			<?php
 			/* Start the Loop */
-            $precedent = 0;
+            $precedent = "XXXXXXX";
 			while ( have_posts() ) :
-				the_post();
-                $titre = get_the_title();
-                $session = substr($titre, 4,1);
-                if($precedent != $session){
-                    echo '<p>Session : ' . $session . '</p>';
-                }
-
-                echo '<p>' . $session . ' ' . $titre . '</p>';
-                $precedent = $session;
-
-
-			endwhile;
-		endif;
-		?>
+					the_post();
+					$titre_grand = get_the_title();
+					$session = substr($titre_grand, 4,1);
+					$nbHeure = substr($titre_grand, -4,3);
+					$titre = substr($titre_grand, 8,-6);
+					$sigle = substr($titre_grand, 0,7);
+					$typeCours = get_field('type_de_cours');
+					if($precedent != $typeCours): ?>
+					 <?php if($precedent != "XXXXXXX"): ?>
+						</section>
+						<?php endif ?>
+						<h2><?php echo $typeCours ?></h2>
+					<section>  
+					<?php endif	?>
+					<article>
+						<p><?php echo $sigle ." - " . $nbHeure . " - " . $typeCours; ?></p>
+						<a href="<?php echo get_permalink(); ?>"><?php echo $titre; ?></a>
+						<p>Session :<?php echo $session; ?></p>
+					</article>
+				<?php
+				$precedent = $typeCours;
+			endwhile; ?>
+			</section>
+		<?php endif; ?>
+		
 
 	</main><!-- #main -->
 

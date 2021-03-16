@@ -111,4 +111,37 @@ body.home::after{
     }
 }
 
+.list-cours{
+
+    section{ 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        article{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            @include tablet{
+                width: 45%;
+            }
+            @include desktop{
+                width: 30%;
+            }
+            border: 1px solid #aaa;
+            p{
+                font-size: .7rem;
+                font-weight: bold;
+            }
+            a{
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }// fin article
+    }//fin section 
+}
+
+
 

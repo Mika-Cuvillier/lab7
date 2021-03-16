@@ -3,8 +3,8 @@ Tags: wordpress reset, reset database, reset wordpress database, reset, advanced
 Contributors: WebFactory
 Requires at least: 4.0
 Requires PHP: 5.2
-Tested up to: 5.6
-Stable tag: 1.85
+Tested up to: 5.7
+Stable tag: 1.86
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,8 +19,6 @@ https://youtu.be/qMnkCW2PFoI?rel=0
 For support please use the <a href="https://wordpress.org/support/plugin/wp-reset">official forum</a>, and if you need more information visit <a href="https://wpreset.com/">wpreset.com</a> and be sure to check out the <a href="https://wpreset.com/">roadmap</a> for the list of upcoming features.
 
 Access WP Reset admin page via the "Tools" menu.
-
-Web accessibility is not an option in 2021! Making your site accessible to visitors with disabilities will save you from hefty fines and instantly grow your audience. That's why we've partnered with <a href="https://wordpress.org/plugins/accessibe/">accessiBe</a> - the fully automated AI service for web accessibility. Download their plugin, connect to the service, and make your site accessible in a few clicks.
 
 **Please read carefully before proceeding to understand what WP Reset does, and remember to always create a snapshot**
 
@@ -116,6 +114,10 @@ Or if needed, upload manually;
 5. Use our 1-click backup feature before running any reset tools
 
 == Changelog ==
+
+= v1.86 =
+* 2021/02/20
+* fixed a small but nasty translation bug that prevented some users from resetting
 
 = v1.85 =
 * 2021/01/30

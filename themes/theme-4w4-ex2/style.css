@@ -1214,6 +1214,44 @@ body.home::after {
   border-radius: 50%;
 }
 
+.list-cours section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.list-cours section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  border: 1px solid #aaa;
+}
+
+@media (max-width: 800px) and (min-width: 600px) {
+  .list-cours section article {
+    width: 45%;
+  }
+}
+
+@media (min-width: 800px) {
+  .list-cours section article {
+    width: 30%;
+  }
+}
+
+.list-cours section article p {
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.list-cours section article a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /* Local/carrousel
 --------------------------------------------- */
 .carrousel {
@@ -1469,20 +1507,20 @@ Animation de la dernière barre bar3
 
 /* Local/fron-page
 --------------------------------------------- */
-.site-main p {
+/*.site-main p{
   margin-left: 50px;
   color: black;
 }
-
 .site-main p:nth-of-type(1),
 .site-main p:nth-of-type(4),
 .site-main p:nth-of-type(9),
 .site-main p:nth-of-type(14),
 .site-main p:nth-of-type(19),
 .site-main p:nth-of-type(24),
-.site-main p:nth-of-type(30) {
-  margin-left: 0;
-  color: black;
-  font-weight: bold;
-}
+.site-main p:nth-of-type(30)
+{
+    margin-left: 0;
+    color: black;
+    font-weight: bold;
+}*/
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@
   Plugin Name: WP Reset
   Plugin URI: https://wpreset.com/
   Description: Reset the entire site or just selected parts while reserving the option to undo by using snapshots.
-  Version: 1.85
+  Version: 1.86
   Requires at least: 4.0
   Requires PHP: 5.2
   Tested up to: 5.6
@@ -1115,7 +1115,6 @@ class WP_Reset
     $siteurl = get_option('siteurl');
     $home = get_option('home');
     $snapshots = $this->get_snapshots();
-    $wp301promo = get_option('wp301promo');
 
     $active_plugins = get_option('active_plugins');
     $active_theme = wp_get_theme();
@@ -1149,7 +1148,6 @@ class WP_Reset
     update_option('home', $home);
     update_option('wp-reset', $this->options);
     update_option('wp-reset-snapshots', $snapshots);
-    update_option('wp301promo', $wp301promo);
 
     // remove password nag
     if (get_user_meta($user_id, 'default_password_nag')) {
@@ -1712,7 +1710,7 @@ class WP_Reset
     echo '<p>' . __('Type <b>reset</b> in the confirmation field to confirm the reset and then click the "Reset WordPress" button.<br>Always <a href="#" class="create-new-snapshot" data-description="Before resetting the site">create a snapshot</a> before resetting if you want to be able to undo.', 'wp-reset') . '</p>';
 
     wp_nonce_field('wp-reset');
-    echo '<p class="mb0"><input id="wp_reset_confirm" type="text" name="wp_reset_confirm" placeholder="' . esc_attr__('Type in "reset"', 'wp-reset') . '" value="" autocomplete="off"> &nbsp;';
+    echo '<p class="mb0"><input id="wp_reset_confirm" type="text" name="wp_reset_confirm" placeholder="' . esc_attr(sprintf(__('Type in: %s', 'wp-reset'), '"reset"')) . '" value="" autocomplete="off"> &nbsp;';
     echo '<a id="wp_reset_submit" class="button button-delete">' . __('Reset Site', 'wp-reset') . '</a>' . $this->get_snapshot_button('reset-wordpress', 'Before resetting the site') . '</p>';
     echo '</div>';
     echo '</div>'; // card reset
@@ -2406,7 +2404,7 @@ class WP_Reset
 
 
   /**
-   * Helper function for generating UTM tagged links
+   * Helper function for generating links
    *
    * @param string  $placement  Optional. UTM content param.
    * @param string  $page       Optional. Page to link to.
@@ -2426,7 +2424,12 @@ class WP_Reset
       $page = '/';
     }
 
-    $parts = array_merge(array('utm_source' => 'wp-reset-free', 'utm_medium' => 'plugin', 'utm_content' => $placement, 'utm_campaign' => 'wp-reset-free-v' . $this->version), $params);
+    if ($placement) {
+      $placement = trim($placement);
+      $placement = '-' . $placement;
+    }
+
+    $parts = array_merge(array('ref' => 'wp-reset-free'. $placement), $params);
 
     if (!empty($anchor)) {
       $anchor = '#' . trim($anchor, '#');

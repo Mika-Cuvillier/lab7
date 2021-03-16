@@ -44,19 +44,7 @@
 				<p class="site-description"><?php echo $theme_4w4_ex2_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-		<!-- Début du carrousel -->
-		<?php
-		if ( is_front_page()) : ?>
-		<section class="carrousel">
-				<div>1</div>
-				<div>2</div>
-				<div>3</div>
-		</section>
-		<button id='un'>1</button>
-		<button id='deux'>2</button>
-		<button id='trois'>3</button>
-		<?php endif ?>
-		<!-- Fin du carrousel -->
+		
 		<!--img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=000000" width="32" height="32"-->
 		<nav id="site-navigation" class="main-navigation">
 			<section id="burger" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
