@@ -24,13 +24,15 @@ get_header();
 			<?php
 			if ( is_front_page()) : ?>
 			<section class="carrousel">
-					<div>1</div>
-					<div>2</div>
-					<div>3</div>
+					<div></div>
+					<div></div>
+					<div></div>
 			</section>
-			<button id='un'>1</button>
-			<button id='deux'>2</button>
-			<button id='trois'>3</button>
+			<div class="radio">
+			<li><input type="radio" name="boutton"id='un'></li>
+			<li><input type="radio" name="boutton"id='deux'></li>
+			<li><input type="radio" name="boutton"id='trois'></li>
+			</div>
 			<?php endif ?>
 			<!-- Fin du carrousel -->
 			<section class="list-cours">
