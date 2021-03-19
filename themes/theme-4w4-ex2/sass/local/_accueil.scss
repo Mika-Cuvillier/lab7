@@ -19,7 +19,7 @@ body.home::after{
     right: 0;
     clip-path: polygon(100% 90%, 100% 100%, 70% 100%);
     background-color: rgb(30, 101, 167);
-    z-index: -1;
+    z-index: -3;
     @include desktop{
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 65% 49%);
         background-color: rgb(30, 101, 167);
@@ -112,7 +112,22 @@ body.home::after{
 }
 
 .list-cours{
-
+    h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-weight: bold;
+    }
+    section:nth-child(8){
+        article{  
+        background-color: #e1f8dc;
+        a:link, a:hover, a:active, a:visited{
+        color: #3BFA35;
+        text-align: center;
+        }
+    } 
+    }
     section{ 
         display: flex;
         flex-direction: row;
@@ -123,11 +138,15 @@ body.home::after{
             justify-content: space-between;
             align-items: center;
             width: 90%;
+            height: 200px;
+            margin: 3%;
             @include tablet{
                 width: 45%;
+                margin: 1.6%;
             }
             @include desktop{
                 width: 30%;
+                margin: 1.5%;
             }
             border: 1px solid #aaa;
             p{
@@ -143,6 +162,7 @@ body.home::after{
     }//fin section 
 }
 
+// Boutons radio
 .radio{
     display: flex;
     flex-direction: row;
@@ -161,5 +181,37 @@ body.home::after{
     }
 }
 
+.Web{
+    background-color: #ffdfbf;
+    justify-content: center;
+    a:link, a:hover, a:active, a:visited{
+        color: #DB5F5F;
+        text-align: center;
+    } 
 
+}
+.Spécifique{
+    background-color: #d1edf2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a:link, a:hover, a:active, a:visited{
+        color: #3A9AE8;
+        text-align: center;
+    } 
+}
+.Jeu{
+    background-color: #fadadd;
+    a:link, a:hover, a:active, a:visited{
+        color: #EBA852;
+        text-align: center;
+    } 
+}
+.Conception{
+    background-color: #dda46d;
+    a:link, a:hover, a:active, a:visited{
+        color: #EB514A;
+        text-align: center;
+    } 
+}
 

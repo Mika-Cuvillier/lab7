@@ -1097,7 +1097,7 @@ body.home::after {
   right: 0;
   clip-path: polygon(100% 90%, 100% 100%, 70% 100%);
   background-color: #1e65a7;
-  z-index: -1;
+  z-index: -3;
 }
 
 @media (min-width: 800px) {
@@ -1214,6 +1214,23 @@ body.home::after {
   border-radius: 50%;
 }
 
+.list-cours h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+.list-cours section:nth-child(8) article {
+  background-color: #e1f8dc;
+}
+
+.list-cours section:nth-child(8) article a:link, .list-cours section:nth-child(8) article a:hover, .list-cours section:nth-child(8) article a:active, .list-cours section:nth-child(8) article a:visited {
+  color: #3BFA35;
+  text-align: center;
+}
+
 .list-cours section {
   display: flex;
   flex-direction: row;
@@ -1226,18 +1243,22 @@ body.home::after {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  height: 200px;
+  margin: 3%;
   border: 1px solid #aaa;
 }
 
 @media (max-width: 800px) and (min-width: 600px) {
   .list-cours section article {
     width: 45%;
+    margin: 1.6%;
   }
 }
 
 @media (min-width: 800px) {
   .list-cours section article {
     width: 30%;
+    margin: 1.5%;
   }
 }
 
@@ -1271,6 +1292,46 @@ body.home::after {
   border-radius: 50%;
 }
 
+.Web {
+  background-color: #ffdfbf;
+  justify-content: center;
+}
+
+.Web a:link, .Web a:hover, .Web a:active, .Web a:visited {
+  color: #DB5F5F;
+  text-align: center;
+}
+
+.Spécifique {
+  background-color: #d1edf2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Spécifique a:link, .Spécifique a:hover, .Spécifique a:active, .Spécifique a:visited {
+  color: #3A9AE8;
+  text-align: center;
+}
+
+.Jeu {
+  background-color: #fadadd;
+}
+
+.Jeu a:link, .Jeu a:hover, .Jeu a:active, .Jeu a:visited {
+  color: #EBA852;
+  text-align: center;
+}
+
+.Conception {
+  background-color: #dda46d;
+}
+
+.Conception a:link, .Conception a:hover, .Conception a:active, .Conception a:visited {
+  color: #EB514A;
+  text-align: center;
+}
+
 /* Local/carrousel
 --------------------------------------------- */
 .carrousel {
@@ -1281,6 +1342,7 @@ body.home::after {
 }
 
 .carrousel div {
+  z-index: -2;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -1291,18 +1353,21 @@ body.home::after {
   background-image: url(./images/paysage1.jpg);
   background-repeat: no-repeat;
   background-size: 100vw;
+  z-index: -2;
 }
 
 .carrousel div:nth-of-type(2) {
   background-image: url(./images/paysage2.jpg);
   background-repeat: no-repeat;
   background-size: 100vw;
+  z-index: -2;
 }
 
 .carrousel div:nth-of-type(3) {
   background-image: url(./images/paysage3.jpg);
   background-repeat: no-repeat;
   background-size: 100vw;
+  z-index: -2;
 }
 
 /* Local/burger
@@ -1528,5 +1593,9 @@ Animation de la dernière barre bar3
   position: relative;
   right: -850px;
   top: 700px;
+}
+
+.site-info {
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
