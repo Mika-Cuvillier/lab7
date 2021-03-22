@@ -787,11 +787,6 @@ Bouton burger
   transform: scale(0.99);
 }
 
-/*
-.main-navigation.toggled .menu-toggle{
-	transform : rotate(90deg);
-}
-*/
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
@@ -1097,7 +1092,7 @@ body.home::after {
   right: 0;
   clip-path: polygon(100% 90%, 100% 100%, 70% 100%);
   background-color: #1e65a7;
-  z-index: -1;
+  z-index: -3;
 }
 
 @media (min-width: 800px) {
@@ -1214,6 +1209,124 @@ body.home::after {
   border-radius: 50%;
 }
 
+.list-cours h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+.list-cours section:nth-child(8) article {
+  background-color: #e1f8dc;
+}
+
+.list-cours section:nth-child(8) article a:link, .list-cours section:nth-child(8) article a:hover, .list-cours section:nth-child(8) article a:active, .list-cours section:nth-child(8) article a:visited {
+  color: #3BFA35;
+  text-align: center;
+}
+
+.list-cours section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.list-cours section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 200px;
+  margin: 3%;
+  border: 1px solid #aaa;
+}
+
+@media (max-width: 800px) and (min-width: 600px) {
+  .list-cours section article {
+    width: 45%;
+    margin: 1.6%;
+  }
+}
+
+@media (min-width: 800px) {
+  .list-cours section article {
+    width: 30%;
+    margin: 1.5%;
+  }
+}
+
+.list-cours section article p {
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.list-cours section article a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF8D18;
+  width: 100vw;
+  height: 25px;
+  padding: 15px;
+}
+
+.radio li {
+  padding-left: 5px;
+  padding-right: 5px;
+  list-style: none;
+  background-color: #319DE0;
+  border-radius: 50%;
+}
+
+.Web {
+  background-color: #ffdfbf;
+  justify-content: center;
+}
+
+.Web a:link, .Web a:hover, .Web a:active, .Web a:visited {
+  color: #DB5F5F;
+  text-align: center;
+}
+
+.Spécifique {
+  background-color: #d1edf2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Spécifique a:link, .Spécifique a:hover, .Spécifique a:active, .Spécifique a:visited {
+  color: #3A9AE8;
+  text-align: center;
+}
+
+.Jeu {
+  background-color: #fadadd;
+}
+
+.Jeu a:link, .Jeu a:hover, .Jeu a:active, .Jeu a:visited {
+  color: #EBA852;
+  text-align: center;
+}
+
+.Conception {
+  background-color: #dda46d;
+}
+
+.Conception a:link, .Conception a:hover, .Conception a:active, .Conception a:visited {
+  color: #EB514A;
+  text-align: center;
+}
+
 /* Local/carrousel
 --------------------------------------------- */
 .carrousel {
@@ -1224,6 +1337,7 @@ body.home::after {
 }
 
 .carrousel div {
+  z-index: -2;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -1231,15 +1345,24 @@ body.home::after {
 }
 
 .carrousel div:nth-of-type(1) {
-  background-color: #be4343;
+  background-image: url(./images/paysage1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  z-index: -2;
 }
 
 .carrousel div:nth-of-type(2) {
-  background-color: #58be43;
+  background-image: url(./images/paysage2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  z-index: -2;
 }
 
 .carrousel div:nth-of-type(3) {
-  background-color: #c613cc;
+  background-image: url(./images/paysage3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  z-index: -2;
 }
 
 /* Local/burger
@@ -1387,6 +1510,7 @@ Animation de la dernière barre bar3
 
 /* Local/animation
 --------------------------------------------- */
+/* Animation des composant du scrum*/
 .wp-block-column {
   animation: anim-entete 1s both cubic-bezier(0.43, 1.06, 0.97, 1.1);
 }
@@ -1420,7 +1544,6 @@ Animation de la dernière barre bar3
   animation-delay: 5s;
 }
 
-/* Animation des composant du scrum*/
 /* Animation de la section .principal*/
 .main-navigation {
   animation: anim-menu 1s both cubic-bezier(0.43, 1.06, 0.97, 1.1);
@@ -1455,6 +1578,39 @@ Animation de la dernière barre bar3
   animation-delay: 5s;
 }
 
+.site-title, .site-description {
+  animation: anim-titre 1s both cubic-bezier(0.43, 1.06, 0.97, 1.1);
+}
+
+@keyframes anim-titre {
+  0% {
+    transform: translatex(-1000px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
+
+.site-title:nth-last-of-type(1), .site-description:nth-last-of-type(1) {
+  animation-delay: 1s;
+}
+
+.site-title:nth-last-of-type(2), .site-description:nth-last-of-type(2) {
+  animation-delay: 2s;
+}
+
+.site-title:nth-last-of-type(3), .site-description:nth-last-of-type(3) {
+  animation-delay: 3s;
+}
+
+.site-title:nth-last-of-type(4), .site-description:nth-last-of-type(4) {
+  animation-delay: 4s;
+}
+
+.site-title:nth-last-of-type(5), .site-description:nth-last-of-type(5) {
+  animation-delay: 5s;
+}
+
 /* Local/footer
 --------------------------------------------- */
 .pagination {
@@ -1467,22 +1623,7 @@ Animation de la dernière barre bar3
   top: 700px;
 }
 
-/* Local/fron-page
---------------------------------------------- */
-.site-main p {
-  margin-left: 50px;
-  color: black;
-}
-
-.site-main p:nth-of-type(1),
-.site-main p:nth-of-type(4),
-.site-main p:nth-of-type(9),
-.site-main p:nth-of-type(14),
-.site-main p:nth-of-type(19),
-.site-main p:nth-of-type(24),
-.site-main p:nth-of-type(30) {
-  margin-left: 0;
-  color: black;
-  font-weight: bold;
+.site-info {
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
