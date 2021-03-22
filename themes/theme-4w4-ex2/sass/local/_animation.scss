@@ -1,3 +1,5 @@
+// Animations
+/* Animation des composant du scrum*/
 .wp-block-column{
     animation: anim-entete 1s both cubic-bezier(.43, 1.06, .97, 1.1);
 }
@@ -16,10 +18,7 @@ $columns: 5;
     }
 }
 
-/* Animation des composant du scrum*/
-
 /* Animation de la section .principal*/
-
 
 .main-navigation{
     animation: anim-menu 1s both cubic-bezier(.43, 1.06, .97, 1.1);
@@ -43,8 +42,28 @@ $columns: 5;
     }
 }
 
+// Animation du titre du site et du sous-titre
+.site-title, .site-description{
+    animation: anim-titre 1s both cubic-bezier(.43, 1.06, .97, 1.1);
+}
 
-    
+@keyframes anim-titre{
+    0%{
+        transform: translatex(-1000px);
+    }
+    100%{
+        transform: translatex(0px);
+    }
+}
+
+$columns: 5;
+
+@for $i from 1 through $columns {
+    .site-title:nth-last-of-type(#{$i}), .site-description:nth-last-of-type(#{$i}){
+      
+        animation-delay: $i#{s};
+    }
+}
 
 
 

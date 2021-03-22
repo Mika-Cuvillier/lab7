@@ -12,11 +12,13 @@
 $largeur_tablet: 600px;
 $largeur_desktop: 800px;
 
+//Média query grand écran
 @mixin desktop{
 	@media(min-width: $largeur_desktop){
 		@content;
 	}
 }
+// Média query petit écran
 @mixin tablet{
 	@media(max-width: $largeur_desktop) and (min-width: $largeur_tablet){
 		@content;

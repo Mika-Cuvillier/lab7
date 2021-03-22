@@ -1,3 +1,4 @@
+// Navigation principale
 .main-navigation {
 	display: block;
 	width: 100vw;
@@ -80,8 +81,6 @@ Bouton burger
 ------------------------------------------------------------------------------*/
 .menu-toggle {
 	padding :0;
-//	transition : transform .25s;
-//	transform : rotate(0deg);
 	border : 0;
 }
 .menu-toggle:hover,
@@ -97,12 +96,6 @@ Bouton burger
 .menu-toggle:active {
     transform: scale(0.99);
 }
-
-/*
-.main-navigation.toggled .menu-toggle{
-	transform : rotate(90deg);
-}
-*/
 
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -138,7 +131,7 @@ menu tablet
 
 /* -------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------*/
-
+// Navigation secondaires
 .comment-navigation,
 .posts-navigation,
 .post-navigation {

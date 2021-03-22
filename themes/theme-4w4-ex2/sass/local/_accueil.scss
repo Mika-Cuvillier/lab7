@@ -1,3 +1,4 @@
+// La page d'accueil
 body.home{
     width: 100vw;
     height: 100vh;
@@ -25,6 +26,7 @@ body.home::after{
         background-color: rgb(30, 101, 167);
     }
 }
+// Le tire du site
 .site-title{
     font-family: $font__title;
     font-size: clamp(0.9rem, #{"-0.875rem + 6.333vw"}, 2.5rem);
@@ -55,6 +57,7 @@ body.home::after{
             }   
     }
 }
+//La description du site
 .site-description{
     font-family: $font__title;
     font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
@@ -62,16 +65,19 @@ body.home::after{
     color: #003;
     margin-top: 0;
 }
+//Le header
 .home .entry-header{
     font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 3rem);
     margin-left: 80px;
     margin-top: 150px;
 }
+//Le menu toggle
 .menu-toggle:active{
     .home .entry-header{
         margin-top: 100px;
     }
 }
+// Les ul de la navigation principale et les ul de la navigation principale toggle
 .main-navigation.toggled ul,
 .main-navigation ul {
 @include tablet{
@@ -90,6 +96,7 @@ body.home::after{
 }
 
 }
+//La classe accueil
 .accueil{
     display: flex;
     align-items: center;
@@ -110,7 +117,7 @@ body.home::after{
         border-radius: 50%;
     }
 }
-
+//La liste des cours
 .list-cours{
     h2{
         display: flex;
@@ -119,6 +126,7 @@ body.home::after{
         color: black;
         font-weight: bold;
     }
+    //La classe Image 2d/3d
     section:nth-child(8){
         article{  
         background-color: #e1f8dc;
@@ -180,7 +188,7 @@ body.home::after{
         border-radius: 50%;
     }
 }
-
+//La classe Web
 .Web{
     background-color: #ffdfbf;
     justify-content: center;
@@ -190,6 +198,7 @@ body.home::after{
     } 
 
 }
+//La classe Spécifique
 .Spécifique{
     background-color: #d1edf2;
     display: flex;
@@ -200,6 +209,7 @@ body.home::after{
         text-align: center;
     } 
 }
+//La classe Jeu
 .Jeu{
     background-color: #fadadd;
     a:link, a:hover, a:active, a:visited{
@@ -207,6 +217,7 @@ body.home::after{
         text-align: center;
     } 
 }
+//La classe Conception
 .Conception{
     background-color: #dda46d;
     a:link, a:hover, a:active, a:visited{
@@ -214,4 +225,3 @@ body.home::after{
         text-align: center;
     } 
 }
-
