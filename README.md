@@ -10,4 +10,4 @@ contient également les valeurs du SCRUM avec une brève explication de chacunes
 
 Lien du dépôt: https://github.com/Mika-Cuvillier/Tp1
 
-Lien Github pages: https://mika-cuvillier.github.io/Tp1git/
+Lien Github pages: https://mika-cuvillier.github.io/Tp1/
