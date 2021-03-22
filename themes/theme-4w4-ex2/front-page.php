@@ -24,9 +24,9 @@ get_header();
 			<?php
 			if ( is_front_page()) : ?>
 			<section class="carrousel">
-					<div></div>
-					<div></div>
-					<div></div>
+					<div><a href="http://localhost/4w4_wordpress/2020/10/07/582-1w1-mise-en-page-web-75h/">Mise en page Web</a></div>
+					<div><a href="http://localhost/4w4_wordpress/2020/10/07/582-2w2animation-et-interactivite-web-75h/">Animation et interactivité Web</a></div>
+					<div><a href="http://localhost/4w4_wordpress/2020/10/07/582-3w3-creation-de-sites-web-dynamiques-90h/">Création de sites Web dynamiques</a></div>
 			</section>
 			<div class="radio">
 			<li><input type="radio" name="boutton"id='un'></li>

@@ -12,22 +12,43 @@
         align-items: center;
         justify-content: center;
         &:nth-of-type(1){
-            background-image: url(./images/paysage1.jpg);
-            background-repeat: no-repeat;
-            background-size: 100vw;
+            //background-image: url(./images/paysage1.jpg);
+            //background-repeat: no-repeat;
+            //background-size: 100vw;
             z-index: -2;
+            background-color: brown;
+            a:any-link, a:hover, a:active, a:visited{
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-size: 3em;
+            }
         }
         &:nth-of-type(2){
-            background-image: url(./images/paysage2.jpg);
-            background-repeat: no-repeat;
-            background-size: 100vw;
+            //background-image: url(./images/paysage2.jpg);
+            //background-repeat: no-repeat;
+            //background-size: 100vw;
             z-index: -2;
+            background-color: burlywood;
+            a:any-link, a:hover, a:active, a:visited{
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-size: 3em;
+            }
         }
         &:nth-of-type(3){
-            background-image: url(./images/paysage3.jpg);
-            background-repeat: no-repeat;
-            background-size: 100vw;
+            //background-image: url(./images/paysage3.jpg);
+            //background-repeat: no-repeat;
+            //-size: 100vw;
             z-index: -2;
+            background-color: chocolate;
+            a:any-link, a:hover, a:active, a:visited{
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-size: 3em;
+            }
         }
 
     }//fin du div
