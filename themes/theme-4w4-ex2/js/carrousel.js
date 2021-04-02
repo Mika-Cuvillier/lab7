@@ -1,18 +1,13 @@
 (function(){   
-    let bout1 = document.getElementById('un');
-    console.log(bout1.id);
-    let bout2 = document.getElementById('deux');
-    console.log(bout2.id);
-    let bout3 = document.getElementById('trois');
-    console.log(bout3.id);
-    let carrousel = document.querySelector('.carrousel');
-    bout1.addEventListener('mousedown', function(){
-        carrousel.style.transform = "translateX(0)";
-    });
-    bout2.addEventListener('mousedown', function(){
-        carrousel.style.transform = "translateX(-100vw)";	
-    });
-    bout3.addEventListener('mousedown', function(){
-        carrousel.style.transform = "translateX(-200vw)";
-    });
+    let bout = document.querySelectorAll('.radio input');
+    let carrousel_2 = document.querySelector('.carrousel-2')
+    let noBouton = 0;
+    bout[0].checked = true;
+
+    for (const bt of bout){
+        bt.value = noBouton++;
+        bt.addEventListener('mousedown', function(){
+            carrousel_2.style.transform = "translateX(" + (-this.value*100)+ "vw)"
+        });
+    }
 }())

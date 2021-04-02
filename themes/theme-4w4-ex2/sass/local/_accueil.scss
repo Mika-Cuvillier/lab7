@@ -127,7 +127,7 @@ body.home::after{
         font-weight: bold;
     }
     //La classe Image 2d/3d
-    section:nth-child(8){
+    .bloc:nth-of-type(8){
         article{  
         background-color: #e1f8dc;
         a:link, a:hover, a:active, a:visited{
@@ -136,7 +136,7 @@ body.home::after{
         }
     } 
     }
-    section{ 
+    section.bloc{ 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -169,7 +169,13 @@ body.home::after{
         }// fin article
     }//fin section 
 }
-
+section.bloc article.Image{ 
+        background-color: #e1f8dc;
+        a:link, a:hover, a:active, a:visited{
+        color: #3BFA35;
+        text-align: center;
+        }
+}
 // Boutons radio
 .radio{
     display: flex;
@@ -188,6 +194,7 @@ body.home::after{
         border-radius: 50%;
     }
 }
+
 //La classe Web
 .Web{
     background-color: #ffdfbf;
@@ -224,4 +231,50 @@ body.home::after{
         color: #EB514A;
         text-align: center;
     } 
+}
+@include tablet{ 
+    #menu-item-276 .sub-menu{
+        height: 205px;
+    }
+    #menu-item-277 .sub-menu{
+        height: 190px;
+    }
+    #menu-item-278 .sub-menu{
+        height: 240px;
+    }
+    #menu-item-279 .sub-menu{
+        height: 190px;
+    }
+    #menu-item-280 .sub-menu{
+        height: 300px;
+    }
+    #menu-item-281 .sub-menu{
+        height: 360px;
+    }
+    #menu-item-231 .sub-menu{
+        height: 80px;
+    }
+}
+@include desktop{ 
+    #menu-item-276 .sub-menu{
+        height: 205px;
+    }
+    #menu-item-277 .sub-menu{
+        height: 190px;
+    }
+    #menu-item-278 .sub-menu{
+        height: 240px;
+    }
+    #menu-item-279 .sub-menu{
+        height: 190px;
+    }
+    #menu-item-280 .sub-menu{
+        height: 300px;
+    }
+    #menu-item-281 .sub-menu{
+        height: 360px;
+    }
+    #menu-item-231 .sub-menu{
+        height: 80px;
+    }
 }

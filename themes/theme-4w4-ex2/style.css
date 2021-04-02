@@ -1217,22 +1217,22 @@ body.home::after {
   font-weight: bold;
 }
 
-.list-cours section:nth-child(8) article {
+.list-cours .bloc:nth-of-type(8) article {
   background-color: #e1f8dc;
 }
 
-.list-cours section:nth-child(8) article a:link, .list-cours section:nth-child(8) article a:hover, .list-cours section:nth-child(8) article a:active, .list-cours section:nth-child(8) article a:visited {
+.list-cours .bloc:nth-of-type(8) article a:link, .list-cours .bloc:nth-of-type(8) article a:hover, .list-cours .bloc:nth-of-type(8) article a:active, .list-cours .bloc:nth-of-type(8) article a:visited {
   color: #3BFA35;
   text-align: center;
 }
 
-.list-cours section {
+.list-cours section.bloc {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.list-cours section article {
+.list-cours section.bloc article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1244,28 +1244,37 @@ body.home::after {
 }
 
 @media (max-width: 800px) and (min-width: 600px) {
-  .list-cours section article {
+  .list-cours section.bloc article {
     width: 45%;
     margin: 1.6%;
   }
 }
 
 @media (min-width: 800px) {
-  .list-cours section article {
+  .list-cours section.bloc article {
     width: 30%;
     margin: 1.5%;
   }
 }
 
-.list-cours section article p {
+.list-cours section.bloc article p {
   font-size: .7rem;
   font-weight: bold;
 }
 
-.list-cours section article a {
+.list-cours section.bloc article a {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+}
+
+section.bloc article.Image {
+  background-color: #e1f8dc;
+}
+
+section.bloc article.Image a:link, section.bloc article.Image a:hover, section.bloc article.Image a:active, section.bloc article.Image a:visited {
+  color: #3BFA35;
+  text-align: center;
 }
 
 .radio {
@@ -1327,57 +1336,87 @@ body.home::after {
   text-align: center;
 }
 
-/* Local/carrousel
---------------------------------------------- */
-.carrousel {
-  display: flex;
-  width: 300vw;
-  height: 20vh;
-  transition: transform .5s;
+@media (max-width: 800px) and (min-width: 600px) {
+  #menu-item-276 .sub-menu {
+    height: 205px;
+  }
+  #menu-item-277 .sub-menu {
+    height: 190px;
+  }
+  #menu-item-278 .sub-menu {
+    height: 240px;
+  }
+  #menu-item-279 .sub-menu {
+    height: 190px;
+  }
+  #menu-item-280 .sub-menu {
+    height: 300px;
+  }
+  #menu-item-281 .sub-menu {
+    height: 360px;
+  }
+  #menu-item-231 .sub-menu {
+    height: 80px;
+  }
 }
 
-.carrousel div {
-  z-index: -2;
+@media (min-width: 800px) {
+  #menu-item-276 .sub-menu {
+    height: 205px;
+  }
+  #menu-item-277 .sub-menu {
+    height: 190px;
+  }
+  #menu-item-278 .sub-menu {
+    height: 240px;
+  }
+  #menu-item-279 .sub-menu {
+    height: 190px;
+  }
+  #menu-item-280 .sub-menu {
+    height: 300px;
+  }
+  #menu-item-281 .sub-menu {
+    height: 360px;
+  }
+  #menu-item-231 .sub-menu {
+    height: 80px;
+  }
+}
+
+/* Local/carrousel
+--------------------------------------------- */
+.carrousel, .carrousel-2 {
+  display: flex;
+  width: 600vw;
+  height: 30vh;
+  transition: transform .5s;
+  flex-wrap: nowrap;
+}
+
+.carrousel .slide__conteneur, .carrousel-2 .slide__conteneur {
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  background-color: cadetblue;
 }
 
-.carrousel div:nth-of-type(1) {
-  z-index: -2;
-  background-color: brown;
+.carrousel .slide__conteneur img, .carrousel-2 .slide__conteneur img {
+  display: block;
+  margin: 2%;
 }
 
-.carrousel div:nth-of-type(1) a:any-link, .carrousel div:nth-of-type(1) a:hover, .carrousel div:nth-of-type(1) a:active, .carrousel div:nth-of-type(1) a:visited {
+.carrousel .slide__conteneur p, .carrousel-2 .slide__conteneur p {
+  font-size: .8rem;
+  color: black;
+}
+
+.carrousel .slide__conteneur a, .carrousel-2 .slide__conteneur a {
+  font-size: 1.5rem;
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 3em;
-}
-
-.carrousel div:nth-of-type(2) {
-  z-index: -2;
-  background-color: burlywood;
-}
-
-.carrousel div:nth-of-type(2) a:any-link, .carrousel div:nth-of-type(2) a:hover, .carrousel div:nth-of-type(2) a:active, .carrousel div:nth-of-type(2) a:visited {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 3em;
-}
-
-.carrousel div:nth-of-type(3) {
-  z-index: -2;
-  background-color: chocolate;
-}
-
-.carrousel div:nth-of-type(3) a:any-link, .carrousel div:nth-of-type(3) a:hover, .carrousel div:nth-of-type(3) a:active, .carrousel div:nth-of-type(3) a:visited {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 3em;
 }
 
 /* Local/burger
