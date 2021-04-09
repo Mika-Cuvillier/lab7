@@ -21,49 +21,9 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?> -->
 			</header><!-- .page-header -->
-			<!-- Début du carrousel -->
-			<!--
 			<?php
 			if ( is_front_page()) : ?>
-			<section class="carrousel">
-					<article class="slide__conteneur">
-						<div class="slide">
-							<img src="" alt="">
-							<div class="slide__info">
-								<p>582-1W1 - 75h - Web</p>
-								<a href="http://localhost/4w4_wordpress/2020/10/07/582-1w1-mise-en-page-web-75h/">Mise en page Web</a>
-								<p>Session :1</p>
-							</div>
-						</div>
-					</article>
-					<article class="slide__conteneur">
-						<div class="slide">
-							<img src="" alt="">
-							<div class="slide__info">
-								<p>582-1W1 - 75h - Web</p>
-								<a href="http://localhost/4w4_wordpress/2020/10/07/582-1w1-mise-en-page-web-75h/">Mise en page Web</a>
-								<p>Session :1</p>
-							</div>
-						</div>
-					</article>
-					<article class="slide__conteneur">
-						<div class="slide">
-							<img src="" alt="">
-							<div class="slide__info">
-								<p>582-1W1 - 75h - Web</p>
-								<a href="http://localhost/4w4_wordpress/2020/10/07/582-1w1-mise-en-page-web-75h/">Mise en page Web</a>
-								<p>Session :1</p>
-							</div>
-						</div>
-					</article>
-			</section>
-			<div class="radio">
-			<li><input type="radio" name="boutton"></li>
-			<li><input type="radio" name="boutton"></li>
-			<li><input type="radio" name="boutton"></li> -->
-			</div>
 			<?php endif ?>
-			<!-- Fin du carrousel -->
 			<section class="list-cours">
 			<?php
 			/* Start the Loop */
@@ -76,19 +36,21 @@ get_header();
 					 	<?php if($precedent != "XXXXXXX"): ?>
 							</section>
 						<?php endif;?>
-						<?php if($precedent == "Web"): ?>
+						<?php if(in_array($precedent, ['Web', 'Jeu', 'Spécifique', 'Conception'])): ?>
 							<div class="radio">
-								<?php echo '<li>'. $radio; '</li>'?>
+								<?php echo $radio; 
+								$radio = '';
+								?>
 							</div>
 						<?php endif;?>
 						<h2><?php echo $tPropriété['typeCours'] ?></h2>
-						<section <?php echo ($tPropriété['typeCours'] == 'Web' ? 'class="carrousel-2"' : 'class="bloc"'); ?>>
+						<section <?php echo (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique', 'Conception']) ? 'class="carrousel-2"' : 'class="bloc"'); ?>>
 						
 					<?php endif;?>
 					<?php
-					if($tPropriété['typeCours'] == "Web"):
+					if(in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique', 'Conception'])):
 						get_template_part( 'template-parts/content', 'carrousel' );
-						$radio .= '<input type="radio" name="boutton">';
+						$radio .= '<input type="radio" name="boutton-'. $tPropriété['typeCours'].'">';
 					else: 
 						get_template_part( 'template-parts/content', 'bloc' );
 					endif;

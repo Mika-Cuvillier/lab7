@@ -83,15 +83,11 @@ body.home::after{
 @include tablet{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height : 2.5rem;
     width : 100%;
 }
 @include desktop{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height : 2.5rem;
     width : 100%;
 }
 
@@ -120,21 +116,12 @@ body.home::after{
 //La liste des cours
 .list-cours{
     h2{
+        padding-top: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: black;
         font-weight: bold;
-    }
-    //La classe Image 2d/3d
-    .bloc:nth-of-type(8){
-        article{  
-        background-color: #e1f8dc;
-        a:link, a:hover, a:active, a:visited{
-        color: #3BFA35;
-        text-align: center;
-        }
-    } 
     }
     section.bloc{ 
         display: flex;
@@ -183,19 +170,24 @@ section.bloc article.Image{
 // Boutons radio
 .radio{
     display: flex;
-    flex-direction: row;
+    //flex-direction: row;
     justify-content: center;
-    align-items: center;
-    background-color: #FF8D18;
+    //align-items: center;
+    //background-color: #FF8D18;
     width: 100vw;
-    height: 25px;
-    padding: 15px;
-    li{
-        padding-left: 5px;
-        padding-right: 5px;
-        list-style: none;
-        background-color: #319DE0;
-        border-radius: 50%;
+    /*height: 25px;
+    padding: 15px;*/
+    input{
+        margin: 2rem;
+        &:nth-last-of-type(0){
+            display: none;
+        }
+        &:nth-last-of-type(1){
+            display: none;
+        }
+        &:nth-last-of-type(2){
+            display: none;
+        }
     }
 }
 

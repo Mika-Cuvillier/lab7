@@ -114,20 +114,32 @@ menu tablet
 	.main-navigation.toggled ul,
 	.main-navigation ul {
 		display: flex;
-		position : static;
+		/*position : static;*/
 		justify-content: space-around;
 		a[href="#"]::after{
 			display: none;
 		}
-		li:hover ul{
-			display: block;
-			position: absolute;
+		li:hover ul{ /* sous-menu */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
 			width: 300px;
-			height: 500px;
+			animation : anim-sous-menu .5s both;
 		}
 		ul{
 			display: none;
 		}
+	}
+}
+
+@keyframes anim-sous-menu{
+	0%{
+		opacity: 0;
+		transform: translateX(0) translateY(100px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0) translateY(0);
 	}
 }
 
@@ -155,6 +167,7 @@ menu tablet
 		flex: 1 0 50%;
 	}
 }
+/*
 @include tablet{ 
     #menu-item-276 .sub-menu{
         height: 205px;
@@ -202,3 +215,4 @@ menu tablet
 		left: -70px;
     }
 }
+*/
