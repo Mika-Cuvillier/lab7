@@ -22,7 +22,6 @@ Bouton Burger
     @include desktop{
         display: none;
     }
-    /* J'ai essayer 150 chose mon menu veut rien savoir(pour afficher le primary-menu) */
     .menu-toggle{
         .primary-menu{ 
             display: block;

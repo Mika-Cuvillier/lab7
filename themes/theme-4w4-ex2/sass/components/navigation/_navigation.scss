@@ -82,6 +82,8 @@ Bouton burger
 .menu-toggle {
 	padding :0;
 	border : 0;
+	top: 35px;
+	z-index: 6;
 }
 .menu-toggle:hover,
 .menu-toggle:focus {
@@ -152,4 +154,51 @@ menu tablet
 		text-align: end;
 		flex: 1 0 50%;
 	}
+}
+@include tablet{ 
+    #menu-item-276 .sub-menu{
+        height: 205px;
+    }
+    #menu-item-277 .sub-menu{
+        height: 190px;
+    }
+    #menu-item-278 .sub-menu{
+        height: 240px;
+    }
+    #menu-item-279 .sub-menu{
+        height: 190px;
+    }
+    #menu-item-280 .sub-menu{
+        height: 300px;
+    }
+    #menu-item-281 .sub-menu{
+        height: 360px;
+    }
+    #menu-item-231 .sub-menu{
+        height: 80px;
+    }
+}
+@include desktop{ 
+    #menu-item-276 .sub-menu{
+        height: 205px;
+    }
+    #menu-item-277 .sub-menu{
+        height: 190px;
+    }
+    #menu-item-278 .sub-menu{
+        height: 240px;
+    }
+    #menu-item-279 .sub-menu{
+        height: 190px;
+    }
+    #menu-item-280 .sub-menu{
+        height: 300px;
+    }
+    #menu-item-281 .sub-menu{
+        height: 360px;
+    }
+    #menu-item-231 .sub-menu{
+        height: 80px;
+		left: -70px;
+    }
 }

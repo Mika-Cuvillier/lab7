@@ -171,9 +171,13 @@ body.home::after{
 }
 section.bloc article.Image{ 
         background-color: #e1f8dc;
+        border-radius: 35%;
         a:link, a:hover, a:active, a:visited{
         color: #3BFA35;
         text-align: center;
+        }
+        a:hover{
+            opacity: 50%;
         }
 }
 // Boutons radio
@@ -199,82 +203,49 @@ section.bloc article.Image{
 .Web{
     background-color: #ffdfbf;
     justify-content: center;
-    a:link, a:hover, a:active, a:visited{
+    a:link, a:active, a:visited{
         color: #DB5F5F;
         text-align: center;
-    } 
+    }
+    a:hover{
+        opacity: 50%;
+    }
 
 }
 //La classe Spécifique
 .Spécifique{
     background-color: #d1edf2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 35%;
     a:link, a:hover, a:active, a:visited{
         color: #3A9AE8;
         text-align: center;
     } 
+    a:hover{
+        opacity: 50%;
+    }
 }
 //La classe Jeu
 .Jeu{
     background-color: #fadadd;
+    border-radius: 35%;
     a:link, a:hover, a:active, a:visited{
         color: #EBA852;
         text-align: center;
     } 
+    a:hover{
+        opacity: 50%;
+    }
 }
 //La classe Conception
 .Conception{
     background-color: #dda46d;
+    border-radius: 35%;
     a:link, a:hover, a:active, a:visited{
         color: #EB514A;
         text-align: center;
     } 
-}
-@include tablet{ 
-    #menu-item-276 .sub-menu{
-        height: 205px;
-    }
-    #menu-item-277 .sub-menu{
-        height: 190px;
-    }
-    #menu-item-278 .sub-menu{
-        height: 240px;
-    }
-    #menu-item-279 .sub-menu{
-        height: 190px;
-    }
-    #menu-item-280 .sub-menu{
-        height: 300px;
-    }
-    #menu-item-281 .sub-menu{
-        height: 360px;
-    }
-    #menu-item-231 .sub-menu{
-        height: 80px;
+    a:hover{
+        opacity: 50%;
     }
 }
-@include desktop{ 
-    #menu-item-276 .sub-menu{
-        height: 205px;
-    }
-    #menu-item-277 .sub-menu{
-        height: 190px;
-    }
-    #menu-item-278 .sub-menu{
-        height: 240px;
-    }
-    #menu-item-279 .sub-menu{
-        height: 190px;
-    }
-    #menu-item-280 .sub-menu{
-        height: 300px;
-    }
-    #menu-item-281 .sub-menu{
-        height: 360px;
-    }
-    #menu-item-231 .sub-menu{
-        height: 80px;
-    }
-}
+

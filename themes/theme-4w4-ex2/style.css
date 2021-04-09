@@ -771,6 +771,8 @@ Bouton burger
 .menu-toggle {
   padding: 0;
   border: 0;
+  top: 35px;
+  z-index: 6;
 }
 
 .menu-toggle:hover,
@@ -847,6 +849,55 @@ menu tablet
 .post-navigation .nav-next {
   text-align: end;
   flex: 1 0 50%;
+}
+
+@media (max-width: 800px) and (min-width: 600px) {
+  #menu-item-276 .sub-menu {
+    height: 205px;
+  }
+  #menu-item-277 .sub-menu {
+    height: 190px;
+  }
+  #menu-item-278 .sub-menu {
+    height: 240px;
+  }
+  #menu-item-279 .sub-menu {
+    height: 190px;
+  }
+  #menu-item-280 .sub-menu {
+    height: 300px;
+  }
+  #menu-item-281 .sub-menu {
+    height: 360px;
+  }
+  #menu-item-231 .sub-menu {
+    height: 80px;
+  }
+}
+
+@media (min-width: 800px) {
+  #menu-item-276 .sub-menu {
+    height: 205px;
+  }
+  #menu-item-277 .sub-menu {
+    height: 190px;
+  }
+  #menu-item-278 .sub-menu {
+    height: 240px;
+  }
+  #menu-item-279 .sub-menu {
+    height: 190px;
+  }
+  #menu-item-280 .sub-menu {
+    height: 300px;
+  }
+  #menu-item-281 .sub-menu {
+    height: 360px;
+  }
+  #menu-item-231 .sub-menu {
+    height: 80px;
+    left: -70px;
+  }
 }
 
 /* Posts and pages
@@ -1270,11 +1321,16 @@ body.home::after {
 
 section.bloc article.Image {
   background-color: #e1f8dc;
+  border-radius: 35%;
 }
 
 section.bloc article.Image a:link, section.bloc article.Image a:hover, section.bloc article.Image a:active, section.bloc article.Image a:visited {
   color: #3BFA35;
   text-align: center;
+}
+
+section.bloc article.Image a:hover {
+  opacity: 50%;
 }
 
 .radio {
@@ -1301,16 +1357,18 @@ section.bloc article.Image a:link, section.bloc article.Image a:hover, section.b
   justify-content: center;
 }
 
-.Web a:link, .Web a:hover, .Web a:active, .Web a:visited {
+.Web a:link, .Web a:active, .Web a:visited {
   color: #DB5F5F;
   text-align: center;
 }
 
+.Web a:hover {
+  opacity: 50%;
+}
+
 .Spécifique {
   background-color: #d1edf2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 35%;
 }
 
 .Spécifique a:link, .Spécifique a:hover, .Spécifique a:active, .Spécifique a:visited {
@@ -1318,8 +1376,13 @@ section.bloc article.Image a:link, section.bloc article.Image a:hover, section.b
   text-align: center;
 }
 
+.Spécifique a:hover {
+  opacity: 50%;
+}
+
 .Jeu {
   background-color: #fadadd;
+  border-radius: 35%;
 }
 
 .Jeu a:link, .Jeu a:hover, .Jeu a:active, .Jeu a:visited {
@@ -1327,8 +1390,13 @@ section.bloc article.Image a:link, section.bloc article.Image a:hover, section.b
   text-align: center;
 }
 
+.Jeu a:hover {
+  opacity: 50%;
+}
+
 .Conception {
   background-color: #dda46d;
+  border-radius: 35%;
 }
 
 .Conception a:link, .Conception a:hover, .Conception a:active, .Conception a:visited {
@@ -1336,52 +1404,8 @@ section.bloc article.Image a:link, section.bloc article.Image a:hover, section.b
   text-align: center;
 }
 
-@media (max-width: 800px) and (min-width: 600px) {
-  #menu-item-276 .sub-menu {
-    height: 205px;
-  }
-  #menu-item-277 .sub-menu {
-    height: 190px;
-  }
-  #menu-item-278 .sub-menu {
-    height: 240px;
-  }
-  #menu-item-279 .sub-menu {
-    height: 190px;
-  }
-  #menu-item-280 .sub-menu {
-    height: 300px;
-  }
-  #menu-item-281 .sub-menu {
-    height: 360px;
-  }
-  #menu-item-231 .sub-menu {
-    height: 80px;
-  }
-}
-
-@media (min-width: 800px) {
-  #menu-item-276 .sub-menu {
-    height: 205px;
-  }
-  #menu-item-277 .sub-menu {
-    height: 190px;
-  }
-  #menu-item-278 .sub-menu {
-    height: 240px;
-  }
-  #menu-item-279 .sub-menu {
-    height: 190px;
-  }
-  #menu-item-280 .sub-menu {
-    height: 300px;
-  }
-  #menu-item-281 .sub-menu {
-    height: 360px;
-  }
-  #menu-item-231 .sub-menu {
-    height: 80px;
-  }
+.Conception a:hover {
+  opacity: 50%;
 }
 
 /* Local/carrousel
@@ -1400,6 +1424,8 @@ section.bloc article.Image a:link, section.bloc article.Image a:hover, section.b
   align-items: center;
   justify-content: space-around;
   background-color: cadetblue;
+  border-top-left-radius: 35%;
+  border-top-right-radius: 35%;
 }
 
 .carrousel .slide__conteneur img, .carrousel-2 .slide__conteneur img {
@@ -1434,7 +1460,6 @@ Bouton Burger
   height: 2rem;
   border-radius: 50%;
   overflow: hidden;
-  /* J'ai essayer 150 chose mon menu veut rien savoir(pour afficher le primary-menu) */
 }
 
 @media (max-width: 800px) and (min-width: 600px) {
